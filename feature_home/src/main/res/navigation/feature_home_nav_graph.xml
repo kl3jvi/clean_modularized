@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/feature_home_nav_graph"
+    app:moduleName="feature_home"
     app:startDestination="@id/homeFragment">
 
     <fragment

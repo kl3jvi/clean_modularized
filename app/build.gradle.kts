@@ -21,6 +21,13 @@ android {
         }
     }
 
+    setDynamicFeatures(
+        mutableSetOf(
+            Dependencies.FEATURE_HOME,
+            Dependencies.FEATURE_FAVORITES
+        )
+    )
+
     buildFeatures {
         dataBinding = true
         viewBinding = true

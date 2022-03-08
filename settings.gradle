@@ -1,3 +1,4 @@
-include(":app", ":feature_home")
+include(":app", ":feature_home", ":feature_favorites")
 rootProject.name = "mvvm_template"
+
 

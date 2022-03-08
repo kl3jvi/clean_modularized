@@ -89,8 +89,20 @@ object Dependencies {
         const val navUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
     }
 
+    const val APP = ":app"
+    const val FEATURE_HOME = ":feature_home"
+    const val FEATURE_FAVORITES = ":feature_favorites"
+//    const val FEATURE_PROFILE = ":feature_profile"
+//    const val FEATURE_FAVOURITE = ":feature_favourite"
+//    const val LIBRARY_TEST_UTILS = ":library_test_utils"
 
+    // False positive" function can be private"
+    // See: https://youtrack.jetbrains.com/issue/KT-33610
+    /*
+    Return list of all modules in the project
+     */
 }
+
 
 fun Project.importCommonPlugins() {
     plugins.apply("kotlin-android")
