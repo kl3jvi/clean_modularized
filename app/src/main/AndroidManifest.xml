@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mvvm_template">
         <activity
-            android:name=".NavigationActivity"
+            android:name=".presentation.NavigationActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

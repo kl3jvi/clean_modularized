@@ -16,7 +16,6 @@ android {
         javaCompileOptions {
             annotationProcessorOptions {
                 argument("room.schemaLocation", "$projectDir/schemas")
-                argument("enableParallelEpoxyProcessing", "true")
             }
         }
     }

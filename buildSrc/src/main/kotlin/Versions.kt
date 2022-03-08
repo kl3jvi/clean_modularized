@@ -3,10 +3,7 @@ object Versions {
     const val androidGradle = "7.0.2"
     const val material = "1.4.0"
 
-
     const val coroutine = "1.6.0"
-
-    // TODO: Deprecated, to migrate to kotlin.serialization
     const val moshi = "1.13.0"
 
     const val okhttp = "4.9.0"
@@ -45,10 +42,11 @@ object Versions {
     object ArchitectureComponents {
         const val paging = "3.1.0"
         const val room = "2.4.0"
+        const val navigation = "2.4.1"
     }
 
 
-    const val navigation = "2.4.1"
+
 
 
 }

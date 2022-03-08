@@ -17,7 +17,7 @@ object Dependencies {
         "androidx.navigation:navigation-dynamic-features-fragment:${Versions.dynamicFeature}"
 
     const val safeNav =
-        "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigation}"
+        "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.ArchitectureComponents.navigation}"
 
     object Moshi {
         const val moshi = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"
@@ -79,23 +79,17 @@ object Dependencies {
     }
 
     object Navigation {
-        const val navRuntime = "androidx.navigation:navigation-runtime-ktx:${Versions.navigation}"
-        const val navFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
-        const val navUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
+        const val navRuntime = "androidx.navigation:navigation-runtime-ktx:${Versions.ArchitectureComponents.navigation}"
+        const val navFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.ArchitectureComponents.navigation}"
+        const val navUi = "androidx.navigation:navigation-ui-ktx:${Versions.ArchitectureComponents.navigation}"
     }
 
     const val APP = ":app"
     const val FEATURE_HOME = ":feature_home"
     const val FEATURE_FAVORITES = ":feature_favorites"
 //    const val FEATURE_PROFILE = ":feature_profile"
-//    const val FEATURE_FAVOURITE = ":feature_favourite"
 //    const val LIBRARY_TEST_UTILS = ":library_test_utils"
 
-    // False positive" function can be private"
-    // See: https://youtrack.jetbrains.com/issue/KT-33610
-    /*
-    Return list of all modules in the project
-     */
 }
 
 
