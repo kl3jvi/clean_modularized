@@ -1,4 +1,4 @@
-# MVVM Clean and Modularized Template
+![clean_modularized](https://raw.githubusercontent.com/kl3jvi/clean_modularized/master/assets/header.png)<br>
 
 [![Kotlin Version](https://img.shields.io/badge/Kotlin-1.5.20-blue.svg)](https://kotlinlang.org)
 [![AGP](https://img.shields.io/badge/AGP-4-blue?style=flat)](https://developer.android.com/studio/releases/gradle-plugin)
