@@ -1,5 +1,8 @@
 plugins {
     id("com.android.application")
+    id("dagger.hilt.android.plugin")
+    id("androidx.navigation.safeargs")
+    kotlin("kapt")
 }
 
 importCommonPlugins()
@@ -23,12 +26,16 @@ android {
         viewBinding = true
     }
 
+
 }
 
+
 dependencies {
+
     implementation(Dependencies.Epoxy.core)
     implementation(Dependencies.Epoxy.paging3)
     implementation(Dependencies.Epoxy.databinding)
+    implementation("androidx.navigation:navigation-dynamic-features-fragment:2.4.1")
     "kapt"(Dependencies.Epoxy.processor)
 
     implementation(Dependencies.coil)
@@ -49,4 +56,7 @@ dependencies {
     implementation(Dependencies.Moshi.moshi)
     "kapt"(Dependencies.Moshi.moshiKapt)
 
+    api(Dependencies.Navigation.navUi)
+    api(Dependencies.Navigation.navRuntime)
+    api(Dependencies.Navigation.navFragment)
 }

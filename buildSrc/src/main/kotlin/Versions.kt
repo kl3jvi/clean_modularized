@@ -11,12 +11,11 @@ object Versions {
 
     const val okhttp = "4.9.0"
     const val retrofit = "2.9.0"
-    const val hiltVersion = "2.40.5"
+    const val hiltVersion = "2.38.1"
     const val hiltAnnotationProcessor = "2.38.1"
-
+    const val gradlePluginHilt = "2.38.1"
 
     const val epoxy = "4.6.3"
-
     const val coil = "1.4.0"
 
     // Test frameworks
@@ -26,7 +25,7 @@ object Versions {
 
     object Android {
         const val sdk = 31
-        const val minSdk = 26
+        const val minSdk = 21
     }
 
     object AndroidX {
@@ -46,5 +45,9 @@ object Versions {
         const val paging = "3.1.0"
         const val room = "2.4.0"
     }
+
+
+    const val navigation = "2.4.1"
+
 
 }

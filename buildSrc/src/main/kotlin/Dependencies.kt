@@ -14,6 +14,9 @@ object Dependencies {
 
     const val coil = "io.coil-kt:coil:${Versions.coil}"
 
+    const val safeNav =
+        "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigation}"
+
     object Moshi {
         const val moshi = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"
         const val moshiKapt = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshi}"
@@ -52,6 +55,8 @@ object Dependencies {
         const val hilt = "com.google.dagger:hilt-android:${Versions.hiltVersion}"
         const val hiltAnnotationProcessor =
             "com.google.dagger:hilt-android-compiler:${Versions.hiltAnnotationProcessor}"
+        const val gradlePluginHilt =
+            "com.google.dagger:hilt-android-gradle-plugin:${Versions.gradlePluginHilt}"
     }
 
     object Retrofit {
@@ -78,11 +83,19 @@ object Dependencies {
         const val ktx = "androidx.room:room-ktx:${Versions.ArchitectureComponents.room}"
     }
 
+    object Navigation {
+        const val navRuntime = "androidx.navigation:navigation-runtime-ktx:${Versions.navigation}"
+        const val navFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+        const val navUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
+    }
+
+
 }
 
 fun Project.importCommonPlugins() {
     plugins.apply("kotlin-android")
     plugins.apply("kotlin-kapt")
+    plugins.apply("kotlin-parcelize")
 }
 
 // apply common plugin
@@ -113,6 +126,11 @@ fun Project.importCommonDependencies() {
         implementation(Dependencies.Moshi.moshi)
 
         implementation(Dependencies.Paging.runtime)
+
+        implementation(Dependencies.Navigation.navFragment)
+        implementation(Dependencies.Navigation.navRuntime)
+        implementation(Dependencies.Navigation.navUi)
+
 
         testImplementation(Dependencies.Test.junit)
         androidTestImplementation(Dependencies.Test.runner)

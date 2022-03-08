@@ -10,11 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mvvm_template">
         <activity
-            android:name=".MainActivity"
+            android:name=".NavigationActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
