@@ -1,6 +1,6 @@
 ![clean_modularized](https://raw.githubusercontent.com/kl3jvi/clean_modularized/master/assets/header.png)<br>
 
-[![Kotlin Version](https://img.shields.io/badge/Kotlin-1.5.20-blue.svg)](https://kotlinlang.org)
+[![Kotlin Version](https://img.shields.io/badge/Kotlin-1.6.10-blue.svg)](https://kotlinlang.org)
 [![AGP](https://img.shields.io/badge/AGP-4-blue?style=flat)](https://developer.android.com/studio/releases/gradle-plugin)
 [![Gradle](https://img.shields.io/badge/Gradle-7-blue?style=flat)](https://gradle.org)
 
@@ -71,10 +71,6 @@ The modularized code-base approach provides few benefits:
 - features can be developed in parallel eg. by different teams
 - each feature can be developed in isolation, independently from other features
 - faster compile time
-
-### Module types and module dependencies
-
-This diagram presents dependencies between project modules (Gradle sub-projects).
 
 ## Package Structures
 
