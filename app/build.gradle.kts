@@ -39,12 +39,7 @@ android {
 
 dependencies {
 
-    implementation(Dependencies.Epoxy.core)
-    implementation(Dependencies.Epoxy.paging3)
-    implementation(Dependencies.Epoxy.databinding)
-    implementation("androidx.navigation:navigation-dynamic-features-fragment:2.4.1")
-    "kapt"(Dependencies.Epoxy.processor)
-
+    implementation(Dependencies.dynamicFeaturePlugin)
     implementation(Dependencies.coil)
 
     implementation(Dependencies.Room.runtime)

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:dist="http://schemas.android.com/apk/distribution"
+<manifest xmlns:dist="http://schemas.android.com/apk/distribution"
     package="com.kl3jvi.feature_favorites">
 
     <dist:module
         dist:instant="true"
-        dist:title="@string/title_feature_favorites">
+        dist:title="@string/feature_favorites">
         <dist:delivery>
             <dist:install-time />
         </dist:delivery>

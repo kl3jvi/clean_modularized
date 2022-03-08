@@ -13,6 +13,8 @@ object Dependencies {
     const val okhttpLogging = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"
 
     const val coil = "io.coil-kt:coil:${Versions.coil}"
+    const val dynamicFeaturePlugin =
+        "androidx.navigation:navigation-dynamic-features-fragment:${Versions.dynamicFeature}"
 
     const val safeNav =
         "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigation}"
@@ -65,13 +67,6 @@ object Dependencies {
     }
 
 
-    object Epoxy {
-        const val core = "com.airbnb.android:epoxy:${Versions.epoxy}"
-        const val processor = "com.airbnb.android:epoxy-processor:${Versions.epoxy}"
-        const val databinding = "com.airbnb.android:epoxy-databinding:${Versions.epoxy}"
-        const val paging3 = "com.airbnb.android:epoxy-paging3:${Versions.epoxy}"
-    }
-
     object Paging {
         const val runtime =
             "androidx.paging:paging-runtime:${Versions.ArchitectureComponents.paging}"
@@ -118,6 +113,7 @@ fun Project.importCommonDependencies() {
         // source: https://github.com/gradle/kotlin-dsl-samples/issues/843
         "implementation"(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
         "implementation"(Dependencies.Kotlin.stdLib)
+        "implementation"(project(":app"))
 
 
         val implementation by configurations

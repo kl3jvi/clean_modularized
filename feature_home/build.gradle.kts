@@ -9,6 +9,5 @@ importCommonDependencies()
 
 
 dependencies {
-    implementation(project(":app"))
 
 }

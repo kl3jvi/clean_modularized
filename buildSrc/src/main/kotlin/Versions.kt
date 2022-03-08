@@ -1,5 +1,5 @@
 object Versions {
-    const val kotlin = "1.5.31"
+    const val kotlin = "1.6.10"
     const val androidGradle = "7.0.2"
     const val material = "1.4.0"
 
@@ -15,8 +15,9 @@ object Versions {
     const val hiltAnnotationProcessor = "2.38.1"
     const val gradlePluginHilt = "2.38.1"
 
-    const val epoxy = "4.6.3"
+
     const val coil = "1.4.0"
+    const val dynamicFeature = "2.4.1"
 
     // Test frameworks
     const val junit = "4.12"

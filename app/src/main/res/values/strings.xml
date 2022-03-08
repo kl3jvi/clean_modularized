@@ -2,5 +2,7 @@
     <string name="app_name">MVVM Template</string>
     <string name="home">Home</string>
     <string name="favorites">Favorites</string>
-    <string name="title_feature_favorites">Favorites</string>
+    <string name="feature_favorites">Favorites</string>
+    <string name="feature_home">feature home</string>
+
 </resources>
