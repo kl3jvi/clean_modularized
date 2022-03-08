@@ -113,7 +113,6 @@ fun Project.importCommonDependencies() {
         // source: https://github.com/gradle/kotlin-dsl-samples/issues/843
         "implementation"(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
         "implementation"(Dependencies.Kotlin.stdLib)
-        "implementation"(project(":app"))
 
 
         val implementation by configurations
