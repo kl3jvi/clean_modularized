@@ -6,14 +6,14 @@ plugins {
     id(NAVIGATION_SAFE_ARGS)
 }
 
-importCommonPlugins()
-//configAndroid()
+
 importCommonDependencies()
 
 android {
     defaultConfig {
         applicationId = Versions.App.id
         compileSdk = Versions.Android.sdk
+        buildToolsVersion = "30.0.3"
         minSdk = Versions.Android.minSdk
         targetSdk = Versions.Android.sdk
         versionCode = Versions.App.versionCode

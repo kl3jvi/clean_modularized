@@ -12,7 +12,6 @@ object Versions {
     const val hiltAnnotationProcessor = "2.38.1"
     const val gradlePluginHilt = "2.38.1"
 
-
     const val coil = "1.4.0"
     const val dynamicFeature = "2.4.1"
 
@@ -22,7 +21,6 @@ object Versions {
     const val testRunner = "1.2.0"
 
     object Android {
-
         const val sdk = 31
         const val minSdk = 21
     }
@@ -45,9 +43,6 @@ object Versions {
         const val room = "2.4.0"
         const val navigation = "2.4.1"
     }
-
-
-
 
 
 }

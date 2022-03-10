@@ -110,12 +110,6 @@ const val KOTLIN_KAPT_PLUGIN = "kotlin-kapt"
 const val NAVIGATION_SAFE_ARGS = "androidx.navigation.safeargs.kotlin"
 
 
-fun Project.importCommonPlugins() {
-    plugins.apply("kotlin-android")
-    plugins.apply("kotlin-kapt")
-    plugins.apply("kotlin-parcelize")
-}
-
 
 
 

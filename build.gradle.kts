@@ -6,15 +6,14 @@ buildscript {
         maven(url = "https://plugins.gradle.org/m2/")
         maven(url = "https://jitpack.io")
     }
+
     dependencies {
         classpath(Dependencies.androidGradlePlugin)
         classpath(Dependencies.Kotlin.gradlePlugin)
-
         classpath(Dependencies.Hilt.gradlePluginHilt)
         classpath(Dependencies.safeNav)
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
     }
+
 }
 
 allprojects {
