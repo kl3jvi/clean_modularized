@@ -87,12 +87,17 @@ object Dependencies {
             "androidx.navigation:navigation-ui-ktx:${Versions.ArchitectureComponents.navigation}"
     }
 
-    const val APP = ":app"
-    const val FEATURE_HOME = ":feature_home"
-    const val FEATURE_FAVORITES = ":feature_favorites"
-//    const val FEATURE_PROFILE = ":feature_profile"
-//    const val LIBRARY_TEST_UTILS = ":library_test_utils"
+    object DynamicFeature {
+        const val APP = ":app"
+        const val FEATURE_HOME = ":feature_home"
+        const val FEATURE_FAVORITES = ":feature_favorites"
+    }
 
+    object AndroidLibrary {
+        const val CORE = ":libraries:core"
+        const val DATA = ":libraries:data"
+        const val DATA_API = ":libraries:data-api"
+    }
 }
 
 
@@ -108,9 +113,6 @@ const val KOTLIN_ANDROID_PLUGIN = "kotlin-android"
 
 const val KOTLIN_KAPT_PLUGIN = "kotlin-kapt"
 const val NAVIGATION_SAFE_ARGS = "androidx.navigation.safeargs.kotlin"
-
-
-
 
 
 // apply common plugin

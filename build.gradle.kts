@@ -12,6 +12,7 @@ buildscript {
         classpath(Dependencies.Kotlin.gradlePlugin)
         classpath(Dependencies.Hilt.gradlePluginHilt)
         classpath(Dependencies.safeNav)
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10")
     }
 
 }

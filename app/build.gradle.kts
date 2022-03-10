@@ -13,7 +13,6 @@ android {
     defaultConfig {
         applicationId = Versions.App.id
         compileSdk = Versions.Android.sdk
-        buildToolsVersion = "30.0.3"
         minSdk = Versions.Android.minSdk
         targetSdk = Versions.Android.sdk
         versionCode = Versions.App.versionCode
@@ -39,8 +38,8 @@ android {
     }
 
     dynamicFeatures.apply {
-        add(Dependencies.FEATURE_HOME)
-        add(Dependencies.FEATURE_FAVORITES)
+        add(Dependencies.DynamicFeature.FEATURE_HOME)
+        add(Dependencies.DynamicFeature.FEATURE_FAVORITES)
     }
 
 
@@ -60,6 +59,8 @@ dependencies {
 
     implementation(Dependencies.dynamicFeaturePlugin)
     implementation(Dependencies.coil)
+
+    implementation(project(Dependencies.AndroidLibrary.CORE))
 
     implementation(Dependencies.Room.runtime)
     implementation(Dependencies.Room.ktx)

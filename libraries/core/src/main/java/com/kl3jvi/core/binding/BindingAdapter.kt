@@ -1,4 +1,4 @@
-package com.kl3jvi.mvvm_template.binding
+package com.kl3jvi.core.binding
 
 import android.graphics.drawable.Drawable
 import android.widget.ImageView

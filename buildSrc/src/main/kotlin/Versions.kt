@@ -21,7 +21,7 @@ object Versions {
     const val testRunner = "1.2.0"
 
     object Android {
-        const val sdk = 31
+        const val sdk = 32
         const val minSdk = 21
     }
 

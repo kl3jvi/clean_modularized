@@ -1,4 +1,11 @@
-include(":app", ":feature_home", ":feature_favorites")
+include(":app",
+        ":feature_home",
+        ":feature_favorites",
+        ":libraries:core"
+)
 rootProject.name = "mvvm_template"
 
 
+include ':libraries:core'
+include ':libraries:data'
+include ':libraries:data-api'
