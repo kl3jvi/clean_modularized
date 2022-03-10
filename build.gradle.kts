@@ -3,6 +3,7 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        maven(url = "https://plugins.gradle.org/m2/")
         maven(url = "https://jitpack.io")
     }
     dependencies {
@@ -24,8 +25,18 @@ allprojects {
     }
 }
 
-tasks {
-    val clean by registering(Delete::class) {
-        delete(buildDir)
+subprojects {
+
+    tasks.withType<Test> {
+        maxParallelForks = (Runtime.getRuntime().availableProcessors() / 2).takeIf { it > 0 } ?: 1
     }
+}
+
+// JVM target applied to all Kotlin tasks across all sub-projects
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions.jvmTarget = JavaVersion.VERSION_1_8.toString()
+}
+
+tasks.register("clean", Delete::class) {
+    delete(rootProject.buildDir)
 }

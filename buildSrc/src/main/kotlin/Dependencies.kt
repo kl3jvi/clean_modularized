@@ -79,9 +79,12 @@ object Dependencies {
     }
 
     object Navigation {
-        const val navRuntime = "androidx.navigation:navigation-runtime-ktx:${Versions.ArchitectureComponents.navigation}"
-        const val navFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.ArchitectureComponents.navigation}"
-        const val navUi = "androidx.navigation:navigation-ui-ktx:${Versions.ArchitectureComponents.navigation}"
+        const val navRuntime =
+            "androidx.navigation:navigation-runtime-ktx:${Versions.ArchitectureComponents.navigation}"
+        const val navFragment =
+            "androidx.navigation:navigation-fragment-ktx:${Versions.ArchitectureComponents.navigation}"
+        const val navUi =
+            "androidx.navigation:navigation-ui-ktx:${Versions.ArchitectureComponents.navigation}"
     }
 
     const val APP = ":app"
@@ -93,11 +96,28 @@ object Dependencies {
 }
 
 
+/**
+ * Plugins
+ */
+const val DAGGER_HILT_PLUGIN = "dagger.hilt.android.plugin"
+const val ANDROID_APPLICATION_PLUGIN = "com.android.application"
+const val ANDROID_DYNAMIC_FEATURE_PLUGIN = "com.android.dynamic-feature"
+const val ANDROID_LIBRARY_PLUGIN = "com.android.library"
+
+const val KOTLIN_ANDROID_PLUGIN = "kotlin-android"
+
+const val KOTLIN_KAPT_PLUGIN = "kotlin-kapt"
+const val NAVIGATION_SAFE_ARGS = "androidx.navigation.safeargs.kotlin"
+
+
 fun Project.importCommonPlugins() {
     plugins.apply("kotlin-android")
     plugins.apply("kotlin-kapt")
     plugins.apply("kotlin-parcelize")
 }
+
+
+
 
 // apply common plugin
 fun Project.importCommonDependencies() {
