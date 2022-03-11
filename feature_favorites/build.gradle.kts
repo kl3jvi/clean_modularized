@@ -1,8 +1,7 @@
 plugins {
-    id("com.android.dynamic-feature")
-    id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt")
-    id("kotlin-android")
+    id(ANDROID_DYNAMIC_FEATURE_PLUGIN)
+    id(KOTLIN_ANDROID_PLUGIN)
+    id(KOTLIN_KAPT_PLUGIN)
 }
 
 android {
@@ -43,4 +42,5 @@ android {
 dependencies {
     importCommonDependencies()
     implementation(project(":app"))
+    implementation(Dependencies.Koin.koin)
 }

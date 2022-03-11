@@ -2,7 +2,6 @@ plugins {
     id(ANDROID_APPLICATION_PLUGIN)
     id(KOTLIN_ANDROID_PLUGIN)
     id(KOTLIN_KAPT_PLUGIN)
-    id(DAGGER_HILT_PLUGIN)
     id(NAVIGATION_SAFE_ARGS)
 }
 
@@ -61,6 +60,7 @@ dependencies {
     implementation(Dependencies.coil)
 
     implementation(project(Dependencies.AndroidLibrary.CORE))
+    implementation(project(Dependencies.AndroidLibrary.DATA_API))
 
     implementation(Dependencies.Room.runtime)
     implementation(Dependencies.Room.ktx)
@@ -72,8 +72,8 @@ dependencies {
     implementation(Dependencies.Retrofit.core)
     implementation(Dependencies.Retrofit.moshiConverter)
 
-    implementation(Dependencies.Hilt.hilt)
-    "kapt"(Dependencies.Hilt.hiltAnnotationProcessor)
+    implementation(Dependencies.Koin.koin)
+
 
     implementation(Dependencies.Moshi.moshi)
     "kapt"(Dependencies.Moshi.moshiKapt)

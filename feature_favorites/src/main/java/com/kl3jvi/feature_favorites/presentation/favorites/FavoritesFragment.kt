@@ -1,32 +1,13 @@
 package com.kl3jvi.feature_favorites.presentation.favorites
 
-import androidx.lifecycle.ViewModelProvider
-import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import com.kl3jvi.feature_favorites.R
+import com.kl3jvi.feature_favorites.databinding.FavoritesFragmentBinding
+import com.kl3jvi.mvvm_template.common.viewBinding
 
-class FavoritesFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = FavoritesFragment()
-    }
-
-    private lateinit var viewModel: FavoritesViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.favorites_fragment, container, false)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(FavoritesViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
+class FavoritesFragment : Fragment(R.layout.favorites_fragment) {
+    private val viewModel: FavoritesViewModel by viewModels()
+    private val binding: FavoritesFragmentBinding by viewBinding()
 
 }

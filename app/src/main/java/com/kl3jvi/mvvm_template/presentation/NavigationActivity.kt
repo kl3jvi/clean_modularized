@@ -8,9 +8,8 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.kl3jvi.mvvm_template.R
 import com.kl3jvi.mvvm_template.databinding.ActivityMainBinding
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+
 class NavigationActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding

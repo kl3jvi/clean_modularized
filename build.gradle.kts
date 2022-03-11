@@ -10,7 +10,7 @@ buildscript {
     dependencies {
         classpath(Dependencies.androidGradlePlugin)
         classpath(Dependencies.Kotlin.gradlePlugin)
-        classpath(Dependencies.Hilt.gradlePluginHilt)
+//        classpath(Dependencies.Koin.gradlePluginHilt)
         classpath(Dependencies.safeNav)
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10")
     }

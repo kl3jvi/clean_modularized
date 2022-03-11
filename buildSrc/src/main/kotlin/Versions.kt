@@ -1,6 +1,6 @@
 object Versions {
     const val kotlin = "1.6.10"
-    const val androidGradle = "7.0.2"
+    const val androidGradle = "7.0.4"
     const val material = "1.4.0"
 
     const val coroutine = "1.6.0"
@@ -8,9 +8,7 @@ object Versions {
 
     const val okhttp = "4.9.0"
     const val retrofit = "2.9.0"
-    const val hiltVersion = "2.38.1"
-    const val hiltAnnotationProcessor = "2.38.1"
-    const val gradlePluginHilt = "2.38.1"
+    const val koinVersion = "3.2.0-beta-1"
 
     const val coil = "1.4.0"
     const val dynamicFeature = "2.4.1"
@@ -21,7 +19,7 @@ object Versions {
     const val testRunner = "1.2.0"
 
     object Android {
-        const val sdk = 32
+        const val sdk = 31
         const val minSdk = 21
     }
 
@@ -43,6 +41,4 @@ object Versions {
         const val room = "2.4.0"
         const val navigation = "2.4.1"
     }
-
-
 }

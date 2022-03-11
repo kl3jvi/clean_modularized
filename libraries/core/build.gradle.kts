@@ -39,4 +39,5 @@ dependencies {
     importCommonDependencies()
     //UNIQUE PER MODULE
     implementation(Dependencies.coil)
+    implementation(Dependencies.Koin.koin)
 }

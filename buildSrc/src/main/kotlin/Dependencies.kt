@@ -51,14 +51,8 @@ object Dependencies {
         const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espresso}"
     }
 
-    object Hilt {
-        //        implementation "com.google.dagger:hilt-android:$hiltVersion"
-//    kapt "com.google.dagger:hilt-android-compiler:$hiltAnnotationProcessor"
-        const val hilt = "com.google.dagger:hilt-android:${Versions.hiltVersion}"
-        const val hiltAnnotationProcessor =
-            "com.google.dagger:hilt-android-compiler:${Versions.hiltAnnotationProcessor}"
-        const val gradlePluginHilt =
-            "com.google.dagger:hilt-android-gradle-plugin:${Versions.gradlePluginHilt}"
+    object Koin {
+        const val koin = "io.insert-koin:koin-android:${Versions.koinVersion}"
     }
 
     object Retrofit {
@@ -104,7 +98,6 @@ object Dependencies {
 /**
  * Plugins
  */
-const val DAGGER_HILT_PLUGIN = "dagger.hilt.android.plugin"
 const val ANDROID_APPLICATION_PLUGIN = "com.android.application"
 const val ANDROID_DYNAMIC_FEATURE_PLUGIN = "com.android.dynamic-feature"
 const val ANDROID_LIBRARY_PLUGIN = "com.android.library"
