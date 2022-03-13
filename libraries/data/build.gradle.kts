@@ -34,7 +34,7 @@ android {
 
 dependencies {
     importCommonDependencies()
-    implementation(project(Dependencies.AndroidLibrary.DATA_API))
+//    implementation(project(Dependencies.AndroidLibrary.))
 
 
     implementation(Dependencies.Koin.koin)

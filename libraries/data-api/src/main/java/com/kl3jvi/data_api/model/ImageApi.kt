@@ -1,10 +1,10 @@
-package com.kl3jvi.data_api.data.remote
+package com.kl3jvi.data_api.model
 
 const val IMAGE_API_KEY = "https://image.tmdb.org/t/p/"
 
 object ImageApi {
     fun getFullUrl(path: String?, size: ImageSize? = ImageSize.ORIGINAL) =
-        "${IMAGE_API_KEY}${size}/${path}"
+        "$IMAGE_API_KEY${size}/${path}"
 }
 
 enum class ImageSize(val path: String) {

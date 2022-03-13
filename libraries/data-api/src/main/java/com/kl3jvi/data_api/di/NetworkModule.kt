@@ -1,6 +1,5 @@
 package com.kl3jvi.data_api.di
 
-import com.kl3jvi.data_api.BuildConfig
 import com.kl3jvi.data_api.MovieService
 import com.kl3jvi.data_api.data.remote.ApiInterceptor
 import com.squareup.moshi.Moshi
@@ -51,15 +50,11 @@ val networkModule = module {
 }
 
 private fun debugMode(function: () -> Unit) {
-    if (BuildConfig.DEBUG) {
+    if (org.koin.android.BuildConfig.DEBUG) {
         function()
     }
 }
 
-private fun releaseMode(function: () -> Unit) {
-    if (BuildConfig.BUILD_TYPE.equals("release", ignoreCase = true)) {
-        function()
-    }
-}
+
 
 

@@ -1,6 +1,6 @@
 package com.kl3jvi.data_api
 
-import com.kl3jvi.data_api.data.remote.*
+import com.kl3jvi.data_api.model.*
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

@@ -1,4 +1,4 @@
-package com.kl3jvi.data_api.data.remote
+package com.kl3jvi.data_api.model
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -14,7 +14,3 @@ data class TmdbApiResponse<T>(
     @field:Json(name = "results")
     var results: List<T>? = null,
 )
-
-fun <T, R> TmdbApiResponse<T>.maps() {
-
-}

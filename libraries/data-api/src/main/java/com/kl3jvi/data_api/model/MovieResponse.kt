@@ -1,4 +1,4 @@
-package com.kl3jvi.data_api.data.remote
+package com.kl3jvi.data_api.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Ignore
@@ -96,8 +96,8 @@ data class Video(
         override fun toString() = path
     }
 
-    val youtubeThumbnail get() = "${YOUTUBE_THUMBNAIL_URL}$key/${ThumbnailSize.MQ}default.jpg"
-    val youtubeVideo get() = "${YOUTUBE_VIDEO_URL}$key"
+    val youtubeThumbnail get() = "$YOUTUBE_THUMBNAIL_URL$key/${ThumbnailSize.MQ}default.jpg"
+    val youtubeVideo get() = "$YOUTUBE_VIDEO_URL$key"
 }
 
 @JsonClass(generateAdapter = true)

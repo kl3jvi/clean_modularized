@@ -1,7 +1,13 @@
 package com.kl3jvi.data.model
 
-import com.kl3jvi.data_api.data.remote.Genre
 import java.util.*
+
+data class TmdbApiResponseRepository<T>(
+    val page: Int? = 0,
+    val totalResults: Int? = 0,
+    val totalPages: Int? = 0,
+    var results: List<T>? = null,
+)
 
 data class MovieListRepositoryModel(
     val id: String,
