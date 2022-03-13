@@ -34,9 +34,10 @@ android {
 
 dependencies {
     importCommonDependencies()
+    implementation(project(Dependencies.AndroidLibrary.DATA_API))
+
 
     implementation(Dependencies.Koin.koin)
-
     implementation(Dependencies.okhttp)
     implementation(Dependencies.okhttpLogging)
     implementation(Dependencies.Retrofit.core)

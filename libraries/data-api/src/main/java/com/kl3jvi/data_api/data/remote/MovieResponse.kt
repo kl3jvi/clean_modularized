@@ -39,6 +39,7 @@ data class MovieListResponse(
     val genreIds: List<Int>?
 )
 
+@JsonClass(generateAdapter = true)
 data class MovieDetailResponse(
     @field:Json(name = "id")
     val id: String,
@@ -62,18 +63,23 @@ data class MovieDetailResponse(
     val backdropPath: String?,
 )
 
+@JsonClass(generateAdapter = true)
 data class GenreListing(
     @field:Json(name = "genres")
     val genreList: List<Genre>?
 )
 
+@JsonClass(generateAdapter = true)
 data class Genre(
     @field:Json(name = "id")
     val id: Int,
     @field:Json(name = "name")
     val name: String?
-)
+){
 
+}
+
+@JsonClass(generateAdapter = true)
 data class Video(
     @field:Json(name = "id") val id: String,
     @field:Json(name = "key") val key: String?
@@ -94,6 +100,7 @@ data class Video(
     val youtubeVideo get() = "${YOUTUBE_VIDEO_URL}$key"
 }
 
+@JsonClass(generateAdapter = true)
 data class Review(
     @field:Json(name = "id")
     val id: String?,
@@ -122,6 +129,7 @@ data class Review(
     }
 }
 
+@JsonClass(generateAdapter = true)
 data class CastListing(
     @field:Json(name = "cast")
     val castList: List<Cast>?

@@ -12,5 +12,9 @@ data class TmdbApiResponse<T>(
     @field:Json(name = "total_pages")
     val totalPages: Int? = 0,
     @field:Json(name = "results")
-    val results: List<T>? = null,
+    var results: List<T>? = null,
 )
+
+fun <T, R> TmdbApiResponse<T>.maps() {
+
+}
