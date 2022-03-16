@@ -34,8 +34,8 @@ android {
 
 dependencies {
     importCommonDependencies()
-//    implementation(project(Dependencies.AndroidLibrary.))
 
+    implementation(project(Dependencies.AndroidLibrary.DOMAIN))
 
     implementation(Dependencies.Koin.koin)
     implementation(Dependencies.okhttp)

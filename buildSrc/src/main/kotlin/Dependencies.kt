@@ -91,6 +91,7 @@ object Dependencies {
         const val CORE = ":libraries:core"
         const val DATA = ":libraries:data"
         const val DATA_API = ":libraries:data-api"
+        const val DOMAIN = ":libraries:domain"
     }
 }
 

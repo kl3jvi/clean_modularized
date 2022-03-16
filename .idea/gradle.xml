@@ -18,6 +18,7 @@
             <option value="$PROJECT_DIR$/libraries/core" />
             <option value="$PROJECT_DIR$/libraries/data" />
             <option value="$PROJECT_DIR$/libraries/data-api" />
+            <option value="$PROJECT_DIR$/libraries/domain" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
