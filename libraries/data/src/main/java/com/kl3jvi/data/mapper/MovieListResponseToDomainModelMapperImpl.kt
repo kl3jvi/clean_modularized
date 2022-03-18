@@ -1,19 +1,18 @@
 package com.kl3jvi.data.mapper
 
-import com.kl3jvi.data.model.MovieListRepositoryModel
 import com.kl3jvi.data.model.TmdbApiResponseRepository
 import com.kl3jvi.domain.model.GenreDomainModel
 import com.kl3jvi.domain.model.MovieListDomainModel
 import com.kl3jvi.domain.model.TmdbApiResponseDomain
 
 interface MovieListResponseToDomainModelMapper {
-    fun toDomainModel(tmdbApiResponse: TmdbApiResponseRepository<MovieListRepositoryModel>): TmdbApiResponseDomain<MovieListDomainModel>
+    fun toDomainModel(tmdbApiResponse: TmdbApiResponseRepository): TmdbApiResponseDomain
 }
 
 class MovieListResponseToDomainModelMapperImpl : MovieListResponseToDomainModelMapper {
     override fun toDomainModel(
-        tmdbApiResponse: TmdbApiResponseRepository<MovieListRepositoryModel>
-    ): TmdbApiResponseDomain<MovieListDomainModel> {
+        tmdbApiResponse: TmdbApiResponseRepository
+    ): TmdbApiResponseDomain {
         val movieListDomainModelList = tmdbApiResponse.results?.map {
             MovieListDomainModel(
                 it.id,

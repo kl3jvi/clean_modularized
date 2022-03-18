@@ -1,12 +1,11 @@
-include(":app",
+include(
+        ":app",
         ":feature_home",
         ":feature_favorites",
-        ":libraries:core"
+        ":libraries:core",
+        ':libraries:data',
+        ':libraries:data-api',
+        ':libraries:domain'
 )
 rootProject.name = "mvvm_template"
 
-
-include ':libraries:core'
-include ':libraries:data'
-include ':libraries:data-api'
-include ':libraries:domain'

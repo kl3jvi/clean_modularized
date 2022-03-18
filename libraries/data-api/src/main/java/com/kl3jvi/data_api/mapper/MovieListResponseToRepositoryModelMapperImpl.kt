@@ -3,20 +3,19 @@ package com.kl3jvi.data_api.mapper
 import com.kl3jvi.data.model.GenreRepositoryModel
 import com.kl3jvi.data.model.MovieListRepositoryModel
 import com.kl3jvi.data.model.TmdbApiResponseRepository
-import com.kl3jvi.data_api.model.MovieListResponse
 import com.kl3jvi.data_api.model.TmdbApiResponse
 
 interface MovieListResponseToRepositoryModelMapper {
-    fun toRepositoryModel(tmdbApiResponse: TmdbApiResponse<MovieListResponse>): TmdbApiResponseRepository<MovieListRepositoryModel>
+    fun toRepositoryModel(tmdbApiResponse: TmdbApiResponse): TmdbApiResponseRepository
 }
 
 class MovieListResponseToRepositoryModelMapperImpl : MovieListResponseToRepositoryModelMapper {
     override fun toRepositoryModel(
-        tmdbApiResponse: TmdbApiResponse<MovieListResponse>
-    ): TmdbApiResponseRepository<MovieListRepositoryModel> {
-        val movieListModel = TmdbApiResponseRepository<MovieListRepositoryModel>()
+        tmdbApiResponse: TmdbApiResponse
+    ): TmdbApiResponseRepository {
+        val movieListModel = TmdbApiResponseRepository()
 
-        movieListModel.results = tmdbApiResponse.results?.map { movieListResponse ->
+        movieListModel.results = tmdbApiResponse.results.map { movieListResponse ->
             MovieListRepositoryModel(
                 movieListResponse.id,
                 movieListResponse.posterPath,

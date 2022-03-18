@@ -2,7 +2,6 @@ package com.kl3jvi.data_api.data.remote
 
 import com.kl3jvi.data.MoviesRemoteSource
 import com.kl3jvi.data.model.GenreRepositoryModel
-import com.kl3jvi.data.model.MovieListRepositoryModel
 import com.kl3jvi.data.model.TmdbApiResponseRepository
 import com.kl3jvi.data_api.MovieService
 import com.kl3jvi.data_api.mapper.MovieListResponseToRepositoryModelMapper
@@ -15,8 +14,16 @@ import org.koin.core.component.inject
 import java.net.UnknownHostException
 
 class MoviesRemoteSourceImpl : MoviesRemoteSource, KoinComponent {
+
+    /**
+     * Koin DI injections
+     */
     private val apiService: MovieService by inject()
     private val movieListMapper: MovieListResponseToRepositoryModelMapper by inject()
+
+    /**
+     * shared flow variables for updating data for the upper layer.
+     */
     private val _movieListSharedFlow = MutableStateFlow(getInitialMovieListInfoModel())
     private val movieListSharedFlow = _movieListSharedFlow.asSharedFlow()
 
@@ -28,23 +35,29 @@ class MoviesRemoteSourceImpl : MoviesRemoteSource, KoinComponent {
     override suspend fun getMovieList(
         list: String,
         page: Int?
-    ): Flow<TmdbApiResponseRepository<MovieListRepositoryModel>> {
+    ): Flow<TmdbApiResponseRepository> {
         try {
-            movieListMapper.toRepositoryModel(apiService.fetchMovieList(list, page))
-                .let { _movieListSharedFlow.emit(it) }
+            movieListMapper.toRepositoryModel(
+                apiService.fetchMovieList(
+                    list = list,
+                    page = page
+                )
+            ).let {
+                _movieListSharedFlow.emit(it)
+            }
         } catch (connectionException: UnknownHostException) {
             throw connectionException
         }
         return movieListSharedFlow.distinctUntilChanged()
     }
 
-    override suspend fun getMovieDetail(): Flow<TmdbApiResponseRepository<MovieListRepositoryModel>> {
+    override suspend fun getMovieDetail(): Flow<TmdbApiResponseRepository> {
         TODO("Not yet implemented")
     }
 
     private fun getInitialMovieListInfoModel() =
-        TmdbApiResponseRepository<MovieListRepositoryModel>(
-            page = 0,
+        TmdbApiResponseRepository(
+            page = 1,
             totalResults = null,
             totalPages = null,
             results = emptyList()

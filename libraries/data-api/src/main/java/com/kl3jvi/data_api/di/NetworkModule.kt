@@ -14,7 +14,6 @@ import java.util.concurrent.TimeUnit
 
 val networkModule = module {
     fun getBaseUrl() = "https://api.themoviedb.org/3/"
-    single { getBaseUrl() }
 
     single {
         OkHttpClient.Builder().apply {
@@ -33,7 +32,7 @@ val networkModule = module {
     single {
         Retrofit.Builder()
             .client(get())
-            .baseUrl(getBaseUrl())
+            .baseUrl("https://api.themoviedb.org/3/")
             .addConverterFactory(MoshiConverterFactory.create())
             .build()
     }
@@ -44,8 +43,7 @@ val networkModule = module {
             .build()
     }
 
-
-    single { single { get<Retrofit>().create(MovieService::class.java) } }
+    single { get<Retrofit>().create(MovieService::class.java) }
 
 }
 
