@@ -29,20 +29,15 @@ android {
 
     dataBinding.isEnabled = true
     viewBinding.isEnabled = true
-
-
 }
-
-
-
 
 dependencies {
     importCommonDependencies()
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation(project(Dependencies.DynamicFeature.APP))
-//    implementation(project(Dependencies.AndroidLibrary.CORE))
-//    implementation(project(Dependencies.AndroidLibrary.DATA))
+
     implementation(project(Dependencies.AndroidLibrary.DATA_API))
+    implementation(project(Dependencies.AndroidLibrary.DOMAIN))
 
     implementation(Dependencies.Koin.koin)
 }

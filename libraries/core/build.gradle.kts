@@ -40,4 +40,11 @@ dependencies {
     //UNIQUE PER MODULE
     implementation(Dependencies.coil)
     implementation(Dependencies.Koin.koin)
+
+    implementation(Dependencies.okhttp)
+    implementation(Dependencies.okhttpLogging)
+    implementation(Dependencies.Retrofit.core)
+    implementation(Dependencies.Retrofit.moshiConverter)
+    implementation(Dependencies.Moshi.moshi)
+    "kapt"(Dependencies.Moshi.moshiKapt)
 }

@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -36,8 +37,11 @@ dependencies {
     importCommonDependencies()
 
     implementation(Dependencies.Koin.koin)
+
     implementation(Dependencies.okhttp)
     implementation(Dependencies.okhttpLogging)
     implementation(Dependencies.Retrofit.core)
     implementation(Dependencies.Retrofit.moshiConverter)
+    implementation(Dependencies.Moshi.moshi)
+    "kapt"(Dependencies.Moshi.moshiKapt)
 }

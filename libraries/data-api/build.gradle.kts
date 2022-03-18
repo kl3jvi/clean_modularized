@@ -43,6 +43,8 @@ dependencies {
     implementation(Dependencies.okhttpLogging)
     implementation(Dependencies.Retrofit.core)
     implementation(Dependencies.Retrofit.moshiConverter)
+    implementation(Dependencies.Moshi.moshi)
+    "kapt"(Dependencies.Moshi.moshiKapt)
 
     implementation(Dependencies.Room.runtime)
     implementation(Dependencies.Room.ktx)

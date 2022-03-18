@@ -51,7 +51,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
 }
+
 
 
 dependencies {
@@ -61,6 +63,12 @@ dependencies {
 
     implementation(project(Dependencies.AndroidLibrary.CORE))
     implementation(project(Dependencies.AndroidLibrary.DATA_API))
+    implementation(project(Dependencies.AndroidLibrary.DOMAIN))
+    implementation(project(Dependencies.AndroidLibrary.DATA))
+
+
+//    implementation(project(Dependencies.DynamicFeature.FEATURE_HOME))
+//    implementation(project(Dependencies.DynamicFeature.FEATURE_FAVORITES))
 
     implementation(Dependencies.Room.runtime)
     implementation(Dependencies.Room.ktx)

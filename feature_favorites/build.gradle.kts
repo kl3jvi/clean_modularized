@@ -41,6 +41,15 @@ android {
 
 dependencies {
     importCommonDependencies()
+    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation(project(":app"))
+
+    implementation(project(Dependencies.AndroidLibrary.DATA_API))
+    implementation(project(Dependencies.AndroidLibrary.DOMAIN))
+
+    implementation(Dependencies.Lifecycle.lifecycleExt)
+    implementation(Dependencies.Lifecycle.lifecycleRuntime)
+    "kapt"(Dependencies.Lifecycle.lifecycleKapt)
+
     implementation(Dependencies.Koin.koin)
 }
