@@ -5,9 +5,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.kl3jvi.domain.model.TmdbApiResponseDomain
 import com.kl3jvi.domain.usecase.GetMoviesList
-import kotlinx.coroutines.CoroutineExceptionHandler
+import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
-import kotlinx.coroutines.launch
+import kotlin.coroutines.CoroutineContext
+import kotlin.coroutines.EmptyCoroutineContext
 
 sealed class State<T> {
     class Loading<T> : State<T>()
@@ -39,7 +40,7 @@ class HomeViewModel(
 
 
     private fun getMovies() {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             getMoviesList.execute(
                 list = list,
                 page = 1
@@ -51,6 +52,5 @@ class HomeViewModel(
         }
     }
 }
-
 
 

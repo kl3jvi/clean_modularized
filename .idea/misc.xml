@@ -12,7 +12,7 @@
         <entry key="feature_favorites/src/main/res/layout/favorites_fragment.xml" value="0.240625" />
         <entry key="feature_home/src/main/res/layout/details_fragment.xml" value="0.2265625" />
         <entry key="feature_home/src/main/res/layout/home_fragment.xml" value="0.1296875" />
-        <entry key="feature_home/src/main/res/layout/item_movie_large.xml" value="0.1" />
+        <entry key="feature_home/src/main/res/layout/item_movie_large.xml" value="0.25" />
       </map>
     </option>
   </component>

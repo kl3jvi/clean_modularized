@@ -39,5 +39,12 @@ dependencies {
     implementation(project(Dependencies.AndroidLibrary.DATA_API))
     implementation(project(Dependencies.AndroidLibrary.DOMAIN))
 
+//    implementation(Dependencies.Lifecycle.lifecycleExt)
+//    implementation(Dependencies.Lifecycle.lifecycleViewModel)
+    implementation(Dependencies.Lifecycle.lifecycleRuntime)
+    "kapt"(Dependencies.Lifecycle.lifecycleKapt)
+
+    implementation(Dependencies.coil)
+
     implementation(Dependencies.Koin.koin)
 }

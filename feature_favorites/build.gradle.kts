@@ -47,7 +47,7 @@ dependencies {
     implementation(project(Dependencies.AndroidLibrary.DATA_API))
     implementation(project(Dependencies.AndroidLibrary.DOMAIN))
 
-    implementation(Dependencies.Lifecycle.lifecycleExt)
+//    implementation(Dependencies.Lifecycle.lifecycleExt)
     implementation(Dependencies.Lifecycle.lifecycleRuntime)
     "kapt"(Dependencies.Lifecycle.lifecycleKapt)
 

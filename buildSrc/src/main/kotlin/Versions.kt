@@ -42,5 +42,5 @@ object Versions {
         const val navigation = "2.4.1"
     }
 
-    const val lifeCycleVersion = "2.0.0"
+    const val lifeCycleVersion = "2.4.1"
 }

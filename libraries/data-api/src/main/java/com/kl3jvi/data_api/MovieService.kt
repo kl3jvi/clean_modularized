@@ -2,6 +2,7 @@ package com.kl3jvi.data_api
 
 import com.kl3jvi.data_api.model.GenreListing
 import com.kl3jvi.data_api.model.TmdbApiResponse
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -20,7 +21,7 @@ interface MovieService {
     suspend fun fetchMovieList(
         @Path("list") list: String,
         @Query("page") page: Int? = null
-    ): TmdbApiResponse
+    ): Response<TmdbApiResponse>
 
 //    @GET(PATH_MOVIE_DETAIL)
 //    fun fetchMovieDetail(@Path(PARAM_MOVIE_ID) movieId: String): MovieDetailResponse

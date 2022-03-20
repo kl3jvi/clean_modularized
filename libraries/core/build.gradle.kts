@@ -37,9 +37,11 @@ android {
 
 dependencies {
     importCommonDependencies()
+
     //UNIQUE PER MODULE
     implementation(Dependencies.coil)
     implementation(Dependencies.Koin.koin)
+
 
     implementation(Dependencies.okhttp)
     implementation(Dependencies.okhttpLogging)

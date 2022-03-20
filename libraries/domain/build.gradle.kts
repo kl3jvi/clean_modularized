@@ -35,6 +35,8 @@ android {
 
 dependencies {
     importCommonDependencies()
+    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+    implementation(project(Dependencies.AndroidLibrary.CORE))
 
     implementation(Dependencies.Koin.koin)
 

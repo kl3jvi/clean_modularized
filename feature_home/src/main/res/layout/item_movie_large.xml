@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
 
+    <data>
+
+        <variable
+            name="movieInfo"
+            type="com.kl3jvi.domain.model.MovieListDomainModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardPoster"
@@ -20,7 +28,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@color/darkBlue" />
+                android:src="@color/darkBlue"
+                app:image="@{movieInfo.getFullImageUrl()}" />
 
         </androidx.cardview.widget.CardView>
 
@@ -30,6 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/size_4"
+            android:text="@{movieInfo.title}"
             app:layout_constraintTop_toBottomOf="@+id/cardPoster"
             tools:text="Star Wars: IV" />
 
@@ -39,6 +49,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/size_8"
+            android:max="5"
+            android:progress="@{movieInfo.getAverage()}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textTitle" />
 
@@ -48,6 +60,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/size_8"
+            android:text="@{@string/vote_counts(movieInfo.getVoteCounts())}"
             app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ratingBar"
@@ -60,6 +73,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/size_8"
+            android:text="@{movieInfo.releaseDate}"
             app:layout_constraintTop_toBottomOf="@+id/ratingBar"
             tools:text="25 min" />
 

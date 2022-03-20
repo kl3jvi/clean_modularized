@@ -82,13 +82,11 @@ object Dependencies {
     }
 
     object Lifecycle {
-        const val lifecycleRuntime =
-            "androidx.lifecycle:lifecycle-runtime:${Versions.lifeCycleVersion}"
-        const val lifecycleExt =
-            "androidx.lifecycle:lifecycle-extensions:${Versions.lifeCycleVersion}"
-        const val lifecycleKapt =
-            "androidx.lifecycle:lifecycle-compiler:${Versions.lifeCycleVersion}"
+        const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifeCycleVersion}"
+//        const val lifecycleExt = "androidx.lifecycle:lifecycle-extensions:${Versions.lifeCycleVersion}"
+        const val lifecycleKapt = "androidx.lifecycle:lifecycle-compiler:${Versions.lifeCycleVersion}"
     }
+
 
     object DynamicFeature {
         const val APP = ":app"
@@ -150,8 +148,6 @@ fun Project.importCommonDependencies() {
         implementation(Dependencies.Navigation.navFragment)
         implementation(Dependencies.Navigation.navRuntime)
         implementation(Dependencies.Navigation.navUi)
-
-
 
 
         testImplementation(Dependencies.Test.junit)
