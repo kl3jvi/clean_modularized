@@ -14,7 +14,7 @@ This project is being maintained to match industry standards.
 
 ## Project characteristics and tech-stack
 
-<!-- <img src="misc/image/application_anim.gif" width="336" align="right" hspace="20"> -->
+<img src="https://raw.githubusercontent.com/kl3jvi/clean_modularized/master/assets/Screenshot_20220318_171359.png" width="336" align="right" hspace="20">
 
 This project takes advantage of best practices, many popular libraries and tools in the Android ecosystem. Most of the libraries are in the stable version unless there is a good reason to use non-stable dependency.
 
